@@ -1,0 +1,319 @@
+@import "bourbon/bourbon"
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:400,600'
+
+body
+  overflow-x: hidden
+  font-family: 'Open Sans', sans-serif
+  background: #eaeaea
+
+.top-header
+  min-height: 225px
+  color: #fff
+  background:
+    image: url('../images/backpic.jpg')
+    position: center center
+    repeat: no-repeat
+    size: cover
+
+.overlay
+  background-color: transparentize(#2b2d33,0.3)
+  min-height: inherit
+  position: relative
+
+.navbar-default
+  height: 55px
+  background-color: transparentize(#23242a, 0.1)
+  width: 100%
+  border: none
+  border-radius: 0px
+  border-bottom: 1px solid #3f414a
+  margin: 0
+  padding: 10px 0
+
+.navbar-nav
+  li
+    a
+      color: #fff!important
+      font-size: 15px
+      padding: 7px 14px
+      +transition(all 0.3s ease)
+
+      &:hover
+        background-color: #3F414A!important
+        +transition(all 0.3s ease)
+
+.navbar-right
+  li
+    border-radius: 3px
+    margin-left: 8px
+    +transition(all 0.3s ease)
+
+    a
+      padding: 0
+      height: 32px
+      width: 32px
+      line-height: 32px
+      text-align: center
+
+    &:hover
+      background-color: #3F414A
+      +transition(all 0.3s ease)
+
+  .ficon
+    background-color: #516ca4
+
+  .gicon
+    background-color: #f20000
+
+  .ticon
+    background-color: #00baff
+
+.header
+  min-height: 170px
+  position: relative
+  top: 55px
+  +display(flex)
+  +flex-direction(column)
+  +align-items(center)
+  +justify-content(center)
+
+  h1
+    margin: 0px
+
+.main-container>.container
+  box-shadow: 0 0 0 1px #ddd
+  padding: 0px
+  margin-top: 30px
+  margin-bottom: 30px
+
+.post-wrapper
+  background-color: #ffffff
+  padding: 0
+  border-right: 1px solid #ddd
+
+.a-post
+  padding: 25px
+
+  h2
+    margin: 0
+    padding: 0
+    text-transform: capitalize
+
+  a, a:hover
+    text-decoration: none
+
+  a
+    color: #000
+    +transition(color 0.3s ease)
+
+    &:hover
+      color: #ab617a
+      +transition(color 0.3s ease)
+
+.post-info
+  margin-top: 15px
+
+.posted-by, .time-info
+  margin-right: 8px
+
+.posted-by, .time-info, .comments
+  color: #777
+
+.image-featured
+  margin-top: 15px
+  overflow: hidden
+  max-width: 729px
+  max-height: 356px
+
+  img
+    +transition(all 1.2s ease-in-out)
+
+    &:hover
+      transform: scale(1.02)
+      +transition(all 1.2s ease-in-out)
+
+.desc-featured
+  margin-top: 15px
+  max-height: 40px
+  text-align: justify
+  overflow: hidden
+  margin-bottom: 0px
+
+.sidebar
+  background-color: #ffffff
+  padding: 10px 20px
+  min-height: 100%
+  border-bottom: 1px solid #bbb
+
+.nav-tabs
+  border: none
+  +display(flex)
+  +justify-content(space-between)
+  border-bottom: 1px solid #eaeaea
+
+  li
+    border: 0px
+    border-radius: 0px
+    margin-bottom: -1px
+    +transition(color 0.2s ease-out)
+
+    a
+      border: 0px
+      color: #000
+      text-transform: uppercase
+
+      &:hover
+        background: #fff
+
+  li.active>a, li.active>a:active, li.active>a:focus, li.active>a:hover
+    color: #ab617a
+    border: 0px
+    background: #fff
+    outline: none
+
+  li.active
+    border-bottom: 1px solid #ab617a
+    +transition(color 0.2s ease-in)
+
+#popular>ul
+  padding-left: 0
+  list-style-type: none
+
+  li
+    margin: 13px 0
+    padding: 0 10px
+    +display(flex)
+    +justify-content(space-between)
+
+    a
+      color: #777
+      text-decoration: none
+      +transition(all 0.2s linear)
+
+      &:hover
+        color: #ab617a
+        text-decoration: none
+        +transition(all 0.2s linear)
+
+.pop-post
+  display: block
+  font-size: 14px
+  max-width: 220px
+  text-align: justify
+  text-transform: capitalize
+
+.pop-img
+  width: 80px
+  height: 80px
+
+#comments>ul
+  padding-left: 0
+  list-style: none
+
+  li
+    margin: 13px 0
+    padding: 0 10px
+    +display(flex)
+
+    img
+      width: 42px
+      height: 42px
+      margin-right: 10px
+
+    a, a:hover
+      color: #ab617a
+      text-decoration: none
+
+.act-comment
+  display: block
+  text-align: justify
+  font-size: 12px
+  color: #777
+
+.archives
+  width: 100%
+  padding: 10px
+  margin: 13px 0
+  border: 1px solid #e6e6e6
+  color: #555
+  border-radius: 2px
+  text-transform: uppercase
+
+  &:focus, &:hover
+    outline: none
+
+#archives
+  padding: 0 10px
+
+.desc-featured-detail
+  margin-top: 15px
+  text-align: justify
+
+  .title
+    margin-bottom: 15px!important
+
+.post-listing
+  li
+    margin: 10px 0
+    text-align: justify
+
+.author-of-post
+  +display(flex)
+  border-top: 1px solid #aaa
+  margin-top: 60px
+  padding: 20px 0 45px 0
+
+  img
+    height: 90px
+    width: 90px
+    margin-right: 10px
+
+  h4
+    color: #000
+
+.author-desc
+  max-height: 42px
+  color: #666
+  overflow: hidden
+
+.share-title
+  margin: 0px
+  width: 139px
+  text-align: center
+  text-transform: uppercase
+
+.line
+  height: 2px
+  width: 44%
+  background-color: #ddd
+
+.share
+  +display(flex)
+  +align-items(center)
+
+.shareIcons
+  max-width: 288px
+  margin: 30px auto 20px auto
+
+  a
+    max-width: 98px
+    width: 100%
+    height: 33px
+    text-align: center
+    margin: 0 5px 5px 0
+    padding: 4px 10px
+    border-radius: 2px
+    color: #ffffff
+
+    &.gp
+      background-color: #ff4646
+
+    &.fb
+      background-color: #6684c2
+
+    &.tw
+      background-color: #40c9fc
+
+    &:hover
+      text-decoration: none
+      color: #fff
